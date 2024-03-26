@@ -1,0 +1,48 @@
+class ArtPiece:
+    def __init__(self, title, artist, year, medium, value):
+        self.title = title
+        self.artist = artist
+        self.year = year
+        self.medium = medium
+        self.value = value
+
+class Museum:
+    def __init__(self, name, location):
+        self.name = name
+        self.location = location
+        self.exhibitions = []
+
+    def add_exhibition(self, exhibition):
+        self.exhibitions.append(exhibition)
+
+class Visitor:
+    def __init__(self, name):
+        self.name = name
+        self.tickets = []
+
+    def purchase_ticket(self, ticket):
+        self.tickets.append(ticket)
+
+class Ticket:
+    def __init__(self, visitor, event, price):
+        self.visitor = visitor
+        self.event = event
+        self.price = price
+        self.timestamp = datetime.datetime.now()
+
+class Exhibition:
+    def __init__(self, name, start_date, end_date):
+        self.name = name
+        self.start_date = start_date
+        self.end_date = end_date
+        self.artworks = []
+
+    def add_artwork(self, artwork):
+        self.artworks.append(artwork)
+
+class Payment:
+    def __init__(self, visitor, amount, method):
+        self.visitor = visitor
+        self.amount = amount
+        self.method = method
+        self.timestamp = datetime.datetime.now()
